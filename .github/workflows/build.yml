@@ -16,13 +16,20 @@ jobs:
         java-version: '17'
     - name: Build with Gradle
       run: ./gradlew assembleDebug
+    - name: Print DIR
+      run: ls ./build/outputs/aar
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
           name: app-debug
-          path: ./build/outputs/aar/debug.apk
+          path: ./build/outputs/aar/debug.aar
     - name: Upload aar
       uses: actions/upload-artifact@v2
       with:
           name: app-debug
-          path: ./build/outputs/aar/*.apk
+          path: ./build/outputs/aar/*.aar
+    - name: Upload aar2
+      uses: actions/upload-artifact@v2
+      with:
+          name: app-debug
+          path: ./build/outputs/aar/usb-serial-for-android3.5.2beta.aar
