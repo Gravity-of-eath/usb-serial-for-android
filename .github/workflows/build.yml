@@ -18,6 +18,10 @@ jobs:
       run: ./gradlew assembleDebug
     - name: Print DIR1
       run: ls ./
+    - name: Print DIR2
+      run: ls ../
+    - name: Print DIR3
+      run: ls ../../
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
