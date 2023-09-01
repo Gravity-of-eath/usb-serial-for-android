@@ -16,8 +16,8 @@ jobs:
         java-version: '17'
     - name: Build with Gradle
       run: ./gradlew assembleDebug
-    - name: Print DIR
-      run: ls ./build/outputs/aar
+    - name: Print DIR1
+      run: ls ./
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
