@@ -17,11 +17,11 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleDebug
     - name: Print DIR1
-      run: ls ./
+      run: ls ./usbSerialForAndroid
     - name: Print DIR2
-      run: ls ../
+      run: ls ./usbSerialForAndroid/build
     - name: Print DIR3
-      run: ls ../../
+      run: ls ./usbSerialForAndroid/build/aar/
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
