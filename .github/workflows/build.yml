@@ -21,19 +21,19 @@ jobs:
     - name: Print DIR2
       run: ls ./usbSerialForAndroid/build
     - name: Print DIR3
-      run: ls ./usbSerialForAndroid/build/aar/
+      run: ls ./usbSerialForAndroid/build/output/aar/
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
           name: app-debug
-          path: ./build/outputs/aar/debug.aar
+          path: ./usbSerialForAndroid/build/output/aar/debug.aar
     - name: Upload aar
       uses: actions/upload-artifact@v2
       with:
           name: app-debug
-          path: ./build/outputs/aar/*.aar
+          path: ./usbSerialForAndroid/build/output/aar/*.aar
     - name: Upload aar2
       uses: actions/upload-artifact@v2
       with:
           name: app-debug
-          path: ./build/outputs/aar/usb-serial-for-android3.5.2beta.aar
+          path: ./usbSerialForAndroid/build/output/aar/usb-serial-for-android3.5.2beta.aar
